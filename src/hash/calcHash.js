@@ -13,11 +13,11 @@ const calculateHash = async () => {
         rs.on('end', () => {
             const hashDigest = hash.digest('hex');
             console.log(hashDigest);
-            resolve(hashDigest);  // Resolve the promise when done
+            resolve(hashDigest);
         });
 
         rs.on('error', (err) => {
-            reject(err);  // Reject the promise on error
+            reject(err);
         });
     });
 };
